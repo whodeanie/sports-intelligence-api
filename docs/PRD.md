@@ -2,8 +2,8 @@
 
 ## Product
 
-A typed HTTP boundary for sports intelligence orchestration and reliability
-controls.
+A small typed HTTP boundary for experimenting with deterministic sports query
+routing and feed-quality policy.
 
 ## Problem
 
@@ -14,8 +14,16 @@ validation, and feed policy directly in its frontend or workflow.
 
 - Expose stable versioned API contracts.
 - Validate every payload with Zod.
-- Route known analyst questions and fall back to human review.
+- Score known analyst question families and fall back to human review for ties
+  or unsupported questions.
 - Block unreliable feed batches before downstream processing.
+
+## Non-goals
+
+- Fetching or storing sports data.
+- Executing the named tools in a query plan.
+- Generating analyst answers.
+- Authentication, multi-tenancy, or production observability.
 
 ## Architecture
 
